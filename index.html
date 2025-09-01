@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Data Science Portfolio - Python, Java, SQL Developer">
+    <meta name="keywords" content="Data Science, Python, Java, SQL, PHP, JavaScript, Developer">
+    <title>Ashrif's Portfolio</title>
+     <link rel="icon" type="image/png" href="images/Logo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+        
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p style="margin-top: 1rem;">Loading Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <div class="cursor" id="cursor"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Ashrif</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Ashrif Ahamed</span></h1>
+                <div class="typing-text" id="typingText"></div>
+                <p class="hero-description">
+                    Passionate Data Science undergraduate with expertise in Python, Java, SQL, and full-stack development. 
+                    I create innovative solutions that bridge the gap between complex data and meaningful insights.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-code"></i> View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Get In Touch
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-image">
+                    <img src="images/profile.jpeg" alt="Profile Picture">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <h2 class="section-title fade-in">About Me</h2>
+        <div class="about-content">
+            <div class="about-text fade-in">
+                <h3 class="about-subtitle">My Journey</h3>
+                <p class="about-paragraph">
+                    I'm a dedicated Data Science undergraduate with a passion for transforming complex datasets into 
+                    actionable insights. My journey began with curiosity about how data shapes our world, leading me 
+                    to master multiple programming languages and frameworks.
+                </p>
+                <p class="about-paragraph">
+                    Currently pursuing my degree while working on real-world projects that combine my technical skills 
+                    with creative problem-solving. I believe in the power of data to drive meaningful change and 
+                    innovation across industries.
+                </p>
+                <p class="about-paragraph">
+                    When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
+                    or sharing knowledge with fellow developers in the community.
+                </p>
+            </div>
+            <div class="about-facts fade-in">
+                <h3 class="about-subtitle">Quick Facts</h3>
+                <div class="facts-list">
+                    <div class="fact-item">
+                        <div class="fact-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="fact-content">
+                            <strong>Education:</strong> Data Science Undergraduate
+                        </div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="fact-content">
+                            <strong>Location:</strong> Sammanthurai,Sri Lanka
+                        </div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="fact-content">
+                            <strong>Focus:</strong> Full-Stack Development & Data Analysis
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title fade-in">Skills & Technologies</h2>
+        <div class="skills-grid">
+            <div class="skill-item fade-in">
+                <div class="skill-header">
+                    <i class="fab fa-python skill-icon"></i>
+                    <span class="skill-name">Python</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-skill="90"></div>
+                </div>
+                <p>Data Analysis, Machine Learning, Web Scraping</p>
+            </div>
+            <div class="skill-item fade-in">
+                <div class="skill-header">
+                    <i class="fab fa-java skill-icon"></i>
+                    <span class="skill-name">Java</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-skill="85"></div>
+                </div>
+                <p>Object-Oriented Programming, Spring Framework</p>
+            </div>
+            <div class="skill-item fade-in">
+                <div class="skill-header">
+                    <i class="fas fa-database skill-icon"></i>
+                    <span class="skill-name">SQL</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-skill="88"></div>
+                </div>
+                <p>Database Design, Query Optimization, Data Mining</p>
+            </div>
+            <div class="skill-item fade-in">
+                <div class="skill-header">
+                    <i class="fab fa-php skill-icon"></i>
+                    <span class="skill-name">PHP</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-skill="80"></div>
+                </div>
+                <p>Server-side Development, Laravel Framework</p>
+            </div>
+            <div class="skill-item fade-in">
+                <div class="skill-header">
+                    <i class="fab fa-js skill-icon"></i>
+                    <span class="skill-name">JavaScript</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-skill="82"></div>
+                </div>
+                <p>Frontend Development, DOM Manipulation, APIs</p>
+            </div>
+            <div class="skill-item fade-in">
+                <div class="skill-header">
+                    <i class="fas fa-chart-line skill-icon"></i>
+                    <span class="skill-name">Data Science</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-skill="86"></div>
+                </div>
+                <p>Statistical Analysis, Visualization, Pandas, NumPy</p>
+            </div>
+        </div>
+    </section>
+
+     
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title fade-in">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <div class="project-image">
+                    <img src="images/wanderhub.png" alt="" class="project-img">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://github.com/Ashrif-Hub/WanderHub" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://www.linkedin.com/posts/ashrif-ahamed_webdevelopment-fullstackdevelopment-bootstrap-activity-7351281753640095744-J-6L?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcAlf0BzbBO0RaVP_bGrVey5ACbQATjS80" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">WanderHub-Travel Management System </h3>
+                    <p class="project-description">
+                        A comprehensive full-stack web application for managing travel bookings and itineraries.
+                         Features secure user authentication, real-time trip scheduling, expense tracking, 
+                         and automated itinerary generation with integrated notifications for seamless travel planning.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-image">
+                    <img src="1718941189678.jpeg" alt="" class="project-img">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Data Analysis Dashboard</h3>
+                    <p class="project-description">
+                        Interactive Python dashboard for visualizing complex datasets with real-time analytics. 
+                        Includes machine learning predictions and customizable chart components.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Plotly</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">NumPy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-image">
+                    <img src="1718941189678.jpeg" alt="Blood Bank Management System" class="project-img">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">E-Commerce Platform</h3>
+                    <p class="project-description">
+                        Modern e-commerce solution built with Java Spring Boot backend and responsive frontend. 
+                        Features include payment integration, inventory management, and user analytics.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">REST API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="section">
+        <h2 class="section-title fade-in">Experience Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <h3>Data Science Student</h3>
+                    <span style="color: var(--accent-blue); font-weight: 600;">2025 - Present</span>
+                    <p>Pursuing Bachelor's degree in Data Science with focus on machine learning, statistical analysis, and data visualization. Maintaining excellent academic performance while working on practical projects.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <h3>WanderHub-Travel Management System</h3>
+                    <span style="color: var(--accent-blue); font-weight: 600;">2025</span>
+                    <p>WanderHub is a full-stack travel management platform that simplifies trip planning with secure bookings, real-time package management, and a user-friendly experience for travelers and travel companies.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <h3>Python Data Analysis Projects</h3>
+                    <span style="color: var(--accent-blue); font-weight: 600;">2025</span>
+                    <p>Completed multiple data analysis projects using Python, Pandas, and NumPy. Created interactive dashboards and implemented machine learning models for predictive analysis.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <h3>Web Development Journey</h3>
+                    <span style="color: var(--accent-blue); font-weight: 600;">2024</span>
+                    <p>Started learning web development with HTML, CSS, JavaScript, and PHP. Built several responsive websites and gained expertise in both frontend and backend technologies.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" style="background: var(--primary-bg); padding: 8rem 0;">
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <h2 style="font-size: 3rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">
+                Let's Build Something
+            </h2>
+            <h2 style="font-size: 3rem; font-weight: 700; color: var(--text-primary); margin: 0;">
+                Amazing Together
+            </h2>
+        </div>
+        
+        <div class="modern-contact-grid">
+            <div class="contact-methods fade-in">
+                <!-- Email Card -->
+                <div class="contact-method-card">
+                    <div class="contact-method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p class="contact-method-info">asrifahamed500@gmail.com</p>
+                    <a href="mailto:asrifahamed500@gmail.com" class="contact-method-action">
+                        Send Message
+                    </a>
+                </div>
+
+                <!-- LinkedIn Card -->
+                <div class="contact-method-card">
+                    <div class="contact-method-icon linkedin">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p class="contact-method-info">Connect professionally</p>
+                    <a href="https://www.linkedin.com/in/ashrif-ahamed/" class="contact-method-action">
+                        Connect
+                    </a>
+                </div>
+
+                <!-- GitHub Card -->
+                <div class="contact-method-card">
+                    <div class="contact-method-icon github">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p class="contact-method-info">Check out my projects</p>
+                    <a href="https://github.com/Ashrif-Hub" class="contact-method-action">
+                        View Profile
+                    </a>
+                </div>
+
+                
+            </div>
+            
+            <div class="modern-contact-form fade-in">
+                <form id="contactForm" class="contact-form-modern">
+                    <div class="modern-form-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="modern-form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="modern-form-group">
+                        <input type="text" id="subject" name="subject" required placeholder=" ">
+                        <label for="subject">Subject</label>
+                        <div class="form-accent"></div>
+                    </div>
+                    <div class="modern-form-group">
+                        <textarea id="message" name="message" rows="6" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="modern-submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section">
+            <p>&copy; 2025 Ashrif Ahamed. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; color: var(--text-secondary);">
+                Transforming ideas into seamless digital experiences
+                
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // DOM Elements
+        const loader = document.getElementById('loader');
+        const themeToggle = document.getElementById('themeToggle');
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        const typingText = document.getElementById('typingText');
+        const contactForm = document.getElementById('contactForm');
+        const scrollProgress = document.getElementById('scrollProgress');
+
+        // Loading Screen
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }, 500);
+            }, 1000);
+        });
+
+        // Theme Toggle
+        let isDark = true;
+        themeToggle.addEventListener('click', () => {
+            isDark = !isDark;
+            document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+            themeToggle.innerHTML = isDark ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        });
+
+        // Mobile Navigation
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            icon.className = navLinks.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
+        });
+
+        // Close mobile menu when link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileToggle.querySelector('i').className = 'fas fa-bars';
+            });
+        });
+
+        // Typing Animation
+        const roles = [
+            'Data Scientist',
+            'Python Developer',
+            'Full Stack Developer',
+            'Machine Learning Engineer',
+            'Data Analyst'
+        ];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeWriter() {
+            const currentRole = roles[roleIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                setTimeout(() => { isDeleting = true; }, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+            }
+
+            const speed = isDeleting ? 50 : 100;
+            setTimeout(typeWriter, speed);
+        }
+
+        // Start typing animation
+        typeWriter();
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll Progress Bar
+        function updateScrollProgress() {
+            const scrolled = window.pageYOffset;
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrolled / maxScroll) * 100;
+            scrollProgress.style.width = progress + '%';
+        }
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    
+                    // Animate skill bars
+                    if (entry.target.classList.contains('skill-item')) {
+                        const progressBar = entry.target.querySelector('.skill-progress');
+                        const skillLevel = progressBar.getAttribute('data-skill');
+                        setTimeout(() => {
+                            progressBar.style.width = skillLevel + '%';
+                        }, 200);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in, .timeline-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header Background on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(10, 10, 10, 0.95)';
+            } else {
+                header.style.background = 'rgba(10, 10, 10, 0.9)';
+            }
+            updateScrollProgress();
+        });
+
+        // Form Validation and Submission
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                showNotification('Please fill in all fields.', 'error');
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showNotification('Please enter a valid email address.', 'error');
+                return;
+            }
+
+            // Simulate form submission
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitButton.disabled = true;
+
+            setTimeout(() => {
+                showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+                this.reset();
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+            }, 2000);
+        });
+
+        // Notification System
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                padding: 1rem 2rem;
+                border-radius: 8px;
+                color: white;
+                font-weight: 600;
+                z-index: 10000;
+                transform: translateX(400px);
+                transition: transform 0.3s ease;
+                ${type === 'success' ? 'background: #10b981;' : 'background: #ef4444;'}
+            `;
+            notification.innerHTML = `
+                <i class="fas ${type === 'success' ? 'fa-check' : 'fa-exclamation-triangle'}"></i>
+                ${message}
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            setTimeout(() => {
+                notification.style.transform = 'translateX(400px)';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 4000);
+        }
+
+       
+
+        // Add floating animation to project cards
+        document.querySelectorAll('.project-card').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.2}s`;
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) rotateX(5deg)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) rotateX(0)';
+            });
+        });
+
+        // Initialize animations on page load
+        setTimeout(() => {
+            // Trigger initial animations for elements in viewport
+            const elementsInView = document.querySelectorAll('.fade-in');
+            elementsInView.forEach((el, index) => {
+                setTimeout(() => {
+                    if (el.getBoundingClientRect().top < window.innerHeight) {
+                        el.classList.add('animate');
+                    }
+                }, index * 100);
+            });
+        }, 1500);
+
+        // Easter egg: Konami Code
+        let konamiCode = [];
+        const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+        
+        document.addEventListener('keydown', (e) => {
+            konamiCode.push(e.code);
+            if (konamiCode.length > konamiSequence.length) {
+                konamiCode.shift();
+            }
+            
+            if (JSON.stringify(konamiCode) === JSON.stringify(konamiSequence)) {
+                // Easter egg activated
+                document.body.style.animation = 'rainbow 2s infinite';
+                showNotification('🎉 Easter egg activated! You found the secret!', 'success');
+                
+                setTimeout(() => {
+                    document.body.style.animation = '';
+                }, 4000);
+                
+                konamiCode = [];
+            }
+        });
+
+        // Add rainbow animation for easter egg
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes rainbow {
+                0% { filter: hue-rotate(0deg); }
+                100% { filter: hue-rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Performance optimization: Debounced scroll handler
+        let ticking = false;
+        function updateOnScroll() {
+            updateScrollProgress();
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    // Additional scroll-based animations can go here
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+        
+        window.addEventListener('scroll', updateOnScroll, { passive: true });
+
+        // Add click sound effect (optional)
+        function addClickSound() {
+            // Create audio context for click sounds
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            
+            function playClickSound() {
+                const oscillator = audioContext.createOscillator();
+                const gain = audioContext.createGain();
+                
+                oscillator.connect(gain);
+                gain.connect(audioContext.destination);
+                
+                oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                gain.gain.setValueAtTime(0.1, audioContext.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+                
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.1);
+            }
+
+            // Add click sound to buttons
+            document.querySelectorAll('.btn, .nav-links a').forEach(element => {
+                element.addEventListener('click', playClickSound);
+            });
+        }
+
+        // Initialize click sounds after user interaction
+        document.addEventListener('click', addClickSound, { once: true });
+
+        
+        const cursor = document.getElementById('cursor');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Hide cursor when mouse leaves the window
+        document.addEventListener('mouseleave', () => {
+            cursor.style.opacity = '0';
+        });
+
+        // Show cursor when mouse enters the window
+        document.addEventListener('mouseenter', () => {
+            cursor.style.opacity = '1';
+        });
+    
+    </script>
+</body>
+</html>
